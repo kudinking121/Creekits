@@ -1,0 +1,21 @@
+import subprocess
+
+def commit_and_push_changes(commit_message):
+    try:
+        # Stage all changes
+        subprocess.run(['git', 'add', '.'])
+
+        # Commit changes with the provided message
+        subprocess.run(['git', 'commit', '-m', commit_message])
+
+        # Push changes to the remote repository
+        subprocess.run(['git', 'push', 'origin', 'main'])
+
+        print("Changes committed and pushed successfully!")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Replace 'your_commit_message' with your desired commit message
+commit_message = 'Updated exploration features'
+
+commit_and_push_changes(commit_message)
