@@ -42,3 +42,10 @@
     }
   ]
 }
+
+mkdir neon-dreamscape-explorer
+cd neon-dreamscape-explorer
+
+npm init
+npm install axios
+
